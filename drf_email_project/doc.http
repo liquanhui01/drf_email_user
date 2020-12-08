@@ -1,0 +1,41 @@
+### Registeration
+POST http://localhost:8000/auth/registration/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "李枫",
+  "password": "liqh930215",
+  "email": "695762725@qq.com"
+}
+
+### Verify
+
+GET http://localhost:8000/auth/email-verify/?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA3MDczMzQ5LCJqdGkiOiIzMzdlMDliYTc5YzE0ZmE2YmZhMGE5MDE3ZmIzMmI0ZiIsInVzZXJfaWQiOiJiNzVmNThlNi02M2E5LTQzY2QtYWFhZS04ODViOTFkZTEzODQifQ.0TFBsf0lxghNdSGQfHwtdvECn_NK5-oOGnWQJ4B0fR0 HTTP/1.1
+
+### Login
+POST http://localhost:8000/auth/login/  HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "695762725@qq.com",
+  "password": "liqh930215"
+}
+
+
+### test
+
+GET http://localhost:8000/auth/me/ HTTP/1.1
+Content-Type: application/json
+Authentication: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYwNzIxNjkzMSwianRpIjoiNzBmOGY1NmU1MjM3NDJmMGFiZjA5NDRhNjhlZGY5ZWUiLCJ1c2VyX2lkIjoiNWM0NjAwNTItNWJmZS00NTQ1LTgxZTAtNGZmNzlmOTc3M2Q0In0.DjKsBLW5E7n5AVDOoKoYwYrjWyknt-hPFWpEjihe2hw
+
+
+### Generate Token
+
+POST http://localhost:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+	"username": "李梦",
+	"email": "695762725@qq.com",
+	"password": "liqh930215"
+}
