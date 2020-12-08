@@ -12,6 +12,11 @@
 - 6、用户修改登陆密码，修改成功后发送邮件到用户邮箱通知修改密码成功
   > Token 生成使用的是 django rest_framework_simpleJWT
 
+### 版本
+
+- Django：使用的是最新版 3.1.4
+- python：3.8.6
+
 ### API
 
 - 注册用户:
