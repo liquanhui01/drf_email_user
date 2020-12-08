@@ -148,7 +148,7 @@ class ResetPasswordView(GenericAPIView):
 
 
 class GetUsersView(ModelViewSet):
-    permission_classes = [IsAuthenticated, IsAdminUser]
+    permission_classes = [IsAuthenticated, ]
     authentication_classes = [JWTAuthentication, ]
     lookup_field = 'id'
     queryset = User.objects.all()
@@ -162,5 +162,6 @@ reset_password_view = ResetPasswordView.as_view()
 user_list_view = GetUsersView.as_view({"get": "list"})
 user_single_view = GetUsersView.as_view({
     "get": "retrieve",
-    "delete": "destroy"
+    "delete": "destroy",
+    "put": "update"
 })

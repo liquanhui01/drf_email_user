@@ -19,6 +19,7 @@ class EmailUser(AbstractUser):
     avatar = models.ImageField(_("user's avater"), upload_to="avatar/",
                                default="", null=True, blank=True)
     email = models.EmailField(_("用户邮箱"), unique=True, max_length=255)
+    is_superuser = models.BooleanField(_("是否是管理员"), default=False)
     is_verify = models.BooleanField(_("是否验证"), default=False)
     is_active = models.BooleanField(_("是否激活"), default=False)
     created_at = models.DateTimeField(_("创建时间"), auto_now_add=True)
