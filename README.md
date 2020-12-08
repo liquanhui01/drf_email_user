@@ -88,3 +88,4 @@
   - CELERY_TIMEZONE
   - CELERY_TASK_TRACK_STARTED
   - CELERY_TASK_TIME_LIMIT
+    > 项目中 Celery 的 broker 使用的是 Redis，Celery 开发文档中推荐使用 RabbitMQ，除了这两种之外还有其他类型的 broker，可以自己去查阅。
